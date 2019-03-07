@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.example.mrtus.demoapp.AccountFragment;
 import com.example.mrtus.demoapp.HomeFragment;
 import com.example.mrtus.demoapp.R;
 
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        loadFragment(new HomeFragment());
+        loadFragment(new AccountFragment());
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_account:
-                    fragment = new HomeFragment();
+                    fragment = new AccountFragment();
                     loadFragment(fragment);
                     return true;
             }

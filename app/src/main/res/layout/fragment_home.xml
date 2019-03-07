@@ -9,7 +9,7 @@
     android:orientation="vertical"
     tools:layout_editor_absoluteY="81dp">
     <LinearLayout
-        android:id="@+id/lly_post"
+        android:id="@+id/llyHomeFra_Post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -49,8 +49,8 @@
     </LinearLayout>
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/lly_post">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@id/llyHomeFra_Post">
 
     </android.support.v7.widget.RecyclerView>
 
