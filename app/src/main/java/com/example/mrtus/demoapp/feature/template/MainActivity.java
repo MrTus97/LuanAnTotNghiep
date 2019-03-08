@@ -1,4 +1,4 @@
-package com.example.mrtus.demoapp.feature.home;
+package com.example.mrtus.demoapp.feature.template;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,8 +8,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.example.mrtus.demoapp.AccountFragment;
-import com.example.mrtus.demoapp.HomeFragment;
+import com.example.mrtus.demoapp.feature.account.AccountFragment;
+import com.example.mrtus.demoapp.feature.home.HomeFragment;
 import com.example.mrtus.demoapp.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,12 +28,10 @@ public class MainActivity extends AppCompatActivity {
             Fragment fragment;
             switch (item.getItemId()) {
                 case R.id.navigation_new:
-                    fragment = new HomeFragment();
-                    loadFragment(fragment);
+                    loadFragment(new HomeFragment());
                     return true;
                 case R.id.navigation_account:
-                    fragment = new AccountFragment();
-                    loadFragment(fragment);
+                    loadFragment(new AccountFragment());
                     return true;
             }
             return false;
