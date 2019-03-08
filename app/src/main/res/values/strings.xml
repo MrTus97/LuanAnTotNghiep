@@ -6,4 +6,14 @@
     <string name="title_home">Home</string>
     <string name="title_account">Account</string>
     <string name="title_search">Search</string>
+    <string name="description">description</string>
+    <string name="prototype_text_userName">Phan Thanh Tú</string>
+    <string name="prototype_text_teamName">Friday Legend</string>
+    <string name="prototype_text_level">Trung bình/ yếu</string>
+    <string name="prototype_text_description">Đội yếu nhớti, nên không có gì phải ghi ra cho nhiều. Vậy là đủ nhiều rồ</string>
+    <string name="hardCode_text_sanYeuThich">Sân yêu thích</string>
+    <string name="hardCode_text_lichSuDatSan">Lịch sử đặt sân</string>
+    <string name="hardCode_text_lichSuBaiDang">Lịch sử bài đăng</string>
+    <string name="hardCode_text_hintContent">Bạn muốn góp kèo ?</string>
+    <string name="hardCode_text_post">Đăng</string>
 </resources>

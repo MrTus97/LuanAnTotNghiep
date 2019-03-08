@@ -2,144 +2,221 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutAccountFra_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AccountFragment"
-    android:orientation="vertical">
+    android:layout_marginBottom="60dp"
+    android:orientation="vertical"
+    android:weightSum="5"
+    tools:context=".AccountFragment">
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/rlyAccountFra_Account"
+        android:id="@+id/layoutAccountFra_infoUser"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@color/colorPrimary">
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imageView2"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginLeft="36dp"
-            android:layout_marginTop="32dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/ic_person_black_24dp"
-            app:civ_border_width="2dp"
-            app:civ_border_color="#00E0CFCF"
-            />
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="2"
+        android:background="@drawable/gradient_green_and_blue">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/imvAccountFra_avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_person_black_24dp"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imbAccountFra_resetPassword"
+            android:layout_width="39dp"
+            android:layout_height="33dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:text="đổi mật khẩu"
+            android:background="@drawable/radius_button"
+            android:contentDescription="@string/description"
+            android:src="@drawable/ic_lock_black_24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/tvAccountFra_username"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="32dp"
-            android:text="tên"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            android:text="@string/prototype_text_userName"
+            android:textColor="#090909"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/imvAccountFra_avatar"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/tvAccountFra_teamName"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:text="tên đội"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            android:text="@string/prototype_text_teamName"
+            app:layout_constraintStart_toEndOf="@+id/imvAccountFra_avatar"
+            app:layout_constraintTop_toBottomOf="@+id/tvAccountFra_username" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/tvAccountFra_level"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:text="star"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            android:text="@string/prototype_text_level"
+            app:layout_constraintStart_toEndOf="@+id/imvAccountFra_avatar"
+            app:layout_constraintTop_toBottomOf="@+id/tvAccountFra_teamName" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/tvAccountFra_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="thành tích"
-            app:layout_constraintStart_toStartOf="@+id/imageView2"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingStart="28dp"
+            android:paddingLeft="28dp"
+            android:paddingEnd="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/prototype_text_description"
+            app:layout_constraintEnd_toEndOf="@+id/tvAccountFra_teamName"
+            app:layout_constraintHorizontal_bias="0.16"
+            app:layout_constraintStart_toStartOf="@+id/imvAccountFra_avatar"
+            app:layout_constraintTop_toBottomOf="@+id/imvAccountFra_avatar" />
 
     </android.support.constraint.ConstraintLayout>
 
-    <LinearLayout
-        android:id="@+id/rlyAccountFra_Action"
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardViewAccountFra_favorite"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorAccent"
-        android:weightSum="3"
-        android:orientation="vertical"
-        android:layout_marginBottom="60dp">
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginTop="8dp"
-            android:padding="8dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="#fff">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="sân yêu thích" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginTop="8dp"
-            android:padding="8dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="#fff">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="sân yêu thích" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginTop="8dp"
-            android:padding="8dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="#fff">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="sân yêu thích" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        android:layout_height="0dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_weight="1"
+        card_view:cardCornerRadius="4dp">
 
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutAccountFra_favorite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E6E2E2">
 
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/imvAccountFra_favorite"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/ic_favorite_black_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.097" />
+
+            <TextView
+                android:id="@+id/tvAccountFra_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hardCode_text_sanYeuThich"
+                app:layout_constraintEnd_toEndOf="@+id/imvAccountFra_favorite"
+                app:layout_constraintStart_toStartOf="@+id/imvAccountFra_favorite"
+                app:layout_constraintTop_toBottomOf="@+id/imvAccountFra_favorite" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardViewAccountFra_reserveHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="4dp"
+        android:layout_weight="1"
+        card_view:cardCornerRadius="4dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutAccountFra_reserveHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E6E2E2">
+
+            <ImageView
+                android:id="@+id/imvAccountFra_reserveHistory"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/ic_history_black_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvAccountFra_reserveHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/hardCode_text_lichSuDatSan"
+                app:layout_constraintEnd_toEndOf="@+id/imvAccountFra_reserveHistory"
+                app:layout_constraintStart_toStartOf="@+id/imvAccountFra_reserveHistory"
+                app:layout_constraintTop_toBottomOf="@+id/imvAccountFra_reserveHistory" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardViewAccountFra_PostHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="4dp"
+        android:layout_weight="1"
+        card_view:cardCornerRadius="4dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutAccountFra_postHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E6E2E2">
+
+            <ImageView
+                android:id="@+id/imvAccountFra_postHistory"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/ic_assignment_black_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.097" />
+
+            <TextView
+                android:id="@+id/tvAccountFra_postHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hardCode_text_lichSuBaiDang"
+                app:layout_constraintEnd_toEndOf="@+id/imvAccountFra_postHistory"
+                app:layout_constraintStart_toStartOf="@+id/imvAccountFra_postHistory"
+                app:layout_constraintTop_toBottomOf="@+id/imvAccountFra_postHistory" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>

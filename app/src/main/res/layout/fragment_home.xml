@@ -1,56 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutHomeFra_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".feature.home.MainActivity"
     android:orientation="vertical"
+    tools:context=".feature.home.MainActivity"
     tools:layout_editor_absoluteY="81dp">
+
     <LinearLayout
-        android:id="@+id/llyHomeFra_Post"
+        android:id="@+id/layoutHomeFra_post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="8dp">
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical">
+
         <LinearLayout
-            android:id="@+id/lly_content"
+            android:id="@+id/layoutHomeFra_content"
             android:layout_width="match_parent"
             android:layout_height="95dp"
             android:orientation="horizontal"
             android:weightSum="12">
-            <ImageView
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imvHomeFra_avatar"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
-                android:background="@color/colorAccent" />
+                android:src="@drawable/ic_person_black_24dp"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="1dp" />
 
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/edtHomeFra_content"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="9"
+                android:background="#EBE8E8"
                 android:ems="10"
-                android:lines="5"
+                android:hint="@string/hardCode_text_hintContent"
                 android:inputType="textMultiLine"
-                android:background="@color/colorPrimary"/>
+                android:lines="4"
+                android:textSize="8pt"
+                android:autofillHints=""
+                tools:targetApi="o" />
         </LinearLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <Button
+                android:id="@+id/btnHomeFra_post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Đăng"
-                android:layout_alignParentRight="true"/>
+                android:layout_alignParentRight="true"
+                android:background="@drawable/radius_button"
+                android:text="@string/hardCode_text_post"
+                android:layout_alignParentEnd="true" />
         </RelativeLayout>
     </LinearLayout>
+
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvHomeFra_listPost"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="@id/llyHomeFra_Post">
+        app:layout_constraintBottom_toBottomOf="@id/layoutHomeFra_post">
 
     </android.support.v7.widget.RecyclerView>
 

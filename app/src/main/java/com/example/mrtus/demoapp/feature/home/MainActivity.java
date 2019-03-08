@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        loadFragment(new AccountFragment());
+        loadFragment(new HomeFragment());
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -28,12 +28,10 @@ public class MainActivity extends AppCompatActivity {
             Fragment fragment;
             switch (item.getItemId()) {
                 case R.id.navigation_new:
-                    fragment = new HomeFragment();
-                    loadFragment(fragment);
+                    loadFragment(new HomeFragment());
                     return true;
                 case R.id.navigation_account:
-                    fragment = new AccountFragment();
-                    loadFragment(fragment);
+                    loadFragment(new AccountFragment());
                     return true;
             }
             return false;
