@@ -11,6 +11,7 @@
     <string name="prototype_text_teamName">Friday Legend</string>
     <string name="prototype_text_level">Trung bình/ yếu</string>
     <string name="prototype_text_description">Đội yếu nhớti, nên không có gì phải ghi ra cho nhiều. Vậy là đủ nhiều rồ</string>
+
     <string name="hardCode_text_favorite">Sân yêu thích</string>
     <string name="hardCode_text_reserveHistory">Lịch sử đặt sân</string>
     <string name="hardCode_text_postHistory">Lịch sử bài đăng</string>
@@ -26,4 +27,5 @@
     <string name="hardCode_text_retypePassword">Nhập lại mật khẩu</string>
     <string name="hardCode_text_haveAccount">Đã có tài khoản ? Đăng nhập</string>
     <string name="hardCode_createAccount">Tạo tài khoản mới</string>
+
 </resources>
