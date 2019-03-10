@@ -30,10 +30,11 @@
             app:civ_border_color="#FF000000"
             app:civ_border_width="1dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="@dimen/padding_xs"/>
 
         <ImageButton
-            android:id="@+id/imbAccountFra_resetPassword"
+            android:id="@+id/imbAccountFra_logout"
             android:layout_width="39dp"
             android:layout_height="33dp"
             android:layout_marginTop="32dp"
@@ -41,10 +42,9 @@
             android:layout_marginRight="16dp"
             android:background="@drawable/radius_button"
             android:contentDescription="@string/description"
-            android:src="@drawable/ic_lock_black_24dp"
+            android:src="@drawable/ic_power_settings_new_black_24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/tvAccountFra_username"
             android:layout_width="wrap_content"
@@ -133,6 +133,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hardCode_text_favorite"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@+id/imvAccountFra_favorite"
                 app:layout_constraintStart_toStartOf="@+id/imvAccountFra_favorite"
                 app:layout_constraintTop_toBottomOf="@+id/imvAccountFra_favorite" />

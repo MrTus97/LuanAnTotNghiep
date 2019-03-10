@@ -13,25 +13,34 @@
         android:id="@+id/layoutHomeFra_post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="@dimen/margin_s"
+        android:layout_marginTop="@dimen/padding_xs"
+        android:layout_marginLeft="@dimen/margin_xs"
+        android:layout_marginRight="@dimen/margin_xs"
         android:orientation="vertical">
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/iron"
+            android:text="@string/hardCode_text_createPost"
+            android:paddingBottom="@dimen/padding_xs"/>
         <LinearLayout
             android:id="@+id/layoutHomeFra_content"
             android:layout_width="match_parent"
-            android:layout_height="95dp"
+            android:layout_height="80dp"
             android:orientation="horizontal"
+            android:background="@color/iron"
             android:weightSum="12">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
-
                 android:id="@+id/imvHomeFra_avatar"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
+                android:padding="@dimen/padding_xs"
                 android:src="@drawable/ic_person_black_24dp"
-                app:civ_border_color="#FF000000"
+                app:civ_border_color="@color/white"
                 app:civ_border_width="1dp" />
 
 
@@ -40,19 +49,23 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="9"
-                android:background="#EBE8E8"
                 android:ems="10"
                 android:hint="@string/hardCode_text_hintContent"
                 android:inputType="textMultiLine"
                 android:lines="4"
-                android:textSize="8pt"
-                android:autofillHints=""
-                tools:targetApi="o" />
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:textSize="@dimen/text_input_m"
+                android:layout_marginRight="@dimen/margin_xs"
+                android:layout_marginEnd="@dimen/margin_xs"
+                />
         </LinearLayout>
 
         <RelativeLayout
+            android:paddingTop="@dimen/padding_xs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/iron">
             <Button
                 android:id="@+id/btnHomeFra_post"
                 android:layout_width="wrap_content"
@@ -60,7 +73,9 @@
                 android:layout_alignParentRight="true"
                 android:background="@drawable/radius_button"
                 android:text="@string/hardCode_text_post"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/margin_xs"
+                android:layout_marginEnd="@dimen/margin_xs"/>
         </RelativeLayout>
     </LinearLayout>
 
@@ -68,8 +83,5 @@
         android:id="@+id/rvHomeFra_listPost"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="@id/layoutHomeFra_post">
-
-    </android.support.v7.widget.RecyclerView>
-
+        app:layout_constraintBottom_toBottomOf="@id/layoutHomeFra_post"/>
 </LinearLayout>
