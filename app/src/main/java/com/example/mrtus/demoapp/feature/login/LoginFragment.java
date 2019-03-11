@@ -1,4 +1,4 @@
-package com.example.mrtus.demoapp.feature.account;
+package com.example.mrtus.demoapp.feature.login;
 
 
 import android.content.Context;
@@ -9,23 +9,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.mrtus.demoapp.R;
 import com.example.mrtus.demoapp.common.Common;
 import com.example.mrtus.demoapp.common.FlagStatus;
-import com.example.mrtus.demoapp.feature.login.LoginFragment;
-
+import com.example.mrtus.demoapp.feature.home.HomeFragment;
+import com.example.mrtus.demoapp.feature.signUp.SignUpFragment;
+import com.example.mrtus.demoapp.feature.template.MainActivity;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AccountFragment extends Fragment {
+public class LoginFragment extends Fragment {
 
     private View view;
-    private ImageButton btnLogout;
+    private Button btnLogin;
+    private TextView tvSignUp;
     private Context context;
-    public AccountFragment() {
+    public LoginFragment() {
         // Required empty public constructor
     }
 
@@ -34,7 +36,7 @@ public class AccountFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view =  inflater.inflate(R.layout.fragment_account, container, false);
+        view = inflater.inflate(R.layout.fragment_login, container, false);
         initXml();
         setEvent();
         return view;
@@ -47,18 +49,24 @@ public class AccountFragment extends Fragment {
     }
 
     private void setEvent() {
-        btnLogout.setOnClickListener(new View.OnClickListener() {
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FlagStatus.isLogin = false;
-                Common.loadFragment(new LoginFragment(),context);
+                FlagStatus.isLogin = true;
+                Common.loadFragment(new HomeFragment(),context);
+            }
+        });
+        tvSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Common.loadFragment(new SignUpFragment(),context);
             }
         });
     }
 
     private void initXml() {
-        btnLogout = view.findViewById(R.id.imbAccountFra_logout);
+        btnLogin = view.findViewById(R.id.btnLoginAct_login);
+        tvSignUp = view.findViewById(R.id.tvLoginAct_signUp);
+
     }
-
-
 }

@@ -29,7 +29,7 @@
     <string name="hardCode_createAccount">Tạo tài khoản mới</string>
     <string name="hardCode_text_whatTypeSearch">Bạn muốn tìm sân theo loại nào ?</string>
     <string name="hardCode_text_followPitch">Tìm theo sân</string>
-    <string name="hardCode_text_followTime">Tìm theo giờ</string>
+    <string name="hardCode_text_followDate">Tìm theo ngày</string>
     <string name="hardCode_text_createPost">Tạo bài viết</string>
 
 </resources>

@@ -4,64 +4,73 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".feature.search.SearchFragment">
+    tools:context=".feature.search.SearchFragment"
+    android:layout_marginBottom="@dimen/bottomNavigation_height">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/hardCode_text_whatTypeSearch"
-        android:paddingTop="@dimen/padding_xxl"
+        android:paddingTop="@dimen/padding_l"
         android:layout_marginBottom="@dimen/margin_m"/>
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardViewSearchFra_followPitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_l"
         android:layout_marginLeft="@dimen/margin_xs"
-        android:layout_marginRight="@dimen/margin_xs">
+        android:layout_marginRight="@dimen/margin_xs"
+        android:layout_marginBottom="@dimen/margin_l">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/imvSearchFra_followPitch"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="90dp"
-                android:src="@drawable/logo"
-                android:contentDescription="@string/description"/>
+                android:contentDescription="@string/description"
+                android:src="@drawable/sanbong" />
+
             <TextView
                 android:id="@+id/tvSearchFra_followPitch"
-                android:layout_below="@+id/imvSearchFra_followPitch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/imvSearchFra_followPitch"
                 android:text="@string/hardCode_text_followPitch"
-                android:textSize="@dimen/text_input_m"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:textSize="@dimen/text_input_m" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardViewSearchFra_followDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/padding_m"
-        android:layout_marginBottom="@dimen/margin_l"
         android:layout_marginLeft="@dimen/margin_xs"
-        android:layout_marginRight="@dimen/margin_xs">
+        android:layout_marginRight="@dimen/margin_xs"
+        android:layout_marginBottom="@dimen/margin_l"
+        android:paddingBottom="@dimen/padding_m">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
-                android:id="@+id/imvSearchFra_followTime"
+                android:id="@+id/imvSearchFra_followDate"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
-                android:src="@drawable/logo"
-                android:contentDescription="@string/description"/>
+                android:contentDescription="@string/description"
+                android:src="@drawable/logo" />
+
             <TextView
-                android:id="@+id/tvSearchFra_followTime"
-                android:layout_below="@+id/imvSearchFra_followTime"
+                android:id="@+id/tvSearchFra_followDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/hardCode_text_followTime"
-                android:textSize="@dimen/text_input_m"
-                android:textAlignment="center"/>
+                android:layout_below="@+id/imvSearchFra_followDate"
+                android:text="@string/hardCode_text_followDate"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_input_m" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 

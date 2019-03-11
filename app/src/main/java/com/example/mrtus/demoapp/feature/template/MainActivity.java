@@ -10,11 +10,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 
+import com.example.mrtus.demoapp.common.Common;
 import com.example.mrtus.demoapp.common.FlagStatus;
 import com.example.mrtus.demoapp.feature.account.AccountFragment;
 import com.example.mrtus.demoapp.feature.home.HomeFragment;
 import com.example.mrtus.demoapp.R;
-import com.example.mrtus.demoapp.feature.login.LoginActivity;
+import com.example.mrtus.demoapp.feature.login.LoginFragment;
 import com.example.mrtus.demoapp.feature.search.SearchFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,8 +39,7 @@ public class MainActivity extends AppCompatActivity {
                         if (FlagStatus.isLogin){
                             loadFragment(new AccountFragment());
                         }else{
-                            Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
-                            startActivity(intent);
+                            loadFragment(new LoginFragment());
                         }
                         return true;
                     case R.id.navigation_search:

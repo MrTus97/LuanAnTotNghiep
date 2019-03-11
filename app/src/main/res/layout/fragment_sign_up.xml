@@ -3,23 +3,24 @@
     android:id="@+id/scvSignUpAct_container"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:layout_marginBottom="@dimen/bottomNavigation_height">
 
     <LinearLayout
         android:id="@+id/layoutSignUpAct_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingLeft="24dp"
+        android:paddingLeft="@dimen/padding_xl"
         android:paddingTop="56dp"
-        android:paddingRight="24dp">
+        android:paddingRight="@dimen/padding_xl">
 
         <ImageView
             android:id="@+id/imvSignUpAct_logo"
             android:layout_width="wrap_content"
-            android:layout_height="72dp"
+            android:layout_height="@dimen/logo_height"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="@dimen/margin_xl"
             android:src="@drawable/logo"
             android:contentDescription="@string/description"/>
 
@@ -44,8 +45,8 @@
             android:id="@+id/tilSignUpAct_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
+            android:layout_marginTop="@dimen/margin_s"
+            android:layout_marginBottom="@dimen/margin_s">
 
             <EditText
                 android:id="@+id/edtSignUpAct_phone"
@@ -92,8 +93,8 @@
             android:id="@+id/tilSignUpAct_retypePassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
+            android:layout_marginTop="@dimen/margin_s"
+            android:layout_marginBottom="@dimen/margin_s">
 
             <EditText
                 android:id="@+id/edtSignUpAct_retypePassword"
@@ -108,9 +109,9 @@
             android:id="@+id/btnSignUpAct_signUp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
-            android:padding="12dp"
+            android:layout_marginTop="@dimen/margin_xl"
+            android:layout_marginBottom="@dimen/margin_xl"
+            android:padding="@dimen/padding_m"
             android:text="@string/hardCode_createAccount" />
 
         <TextView
