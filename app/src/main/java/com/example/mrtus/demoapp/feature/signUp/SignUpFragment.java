@@ -2,7 +2,6 @@ package com.example.mrtus.demoapp.feature.signUp;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -14,7 +13,7 @@ import android.widget.TextView;
 import com.example.mrtus.demoapp.R;
 import com.example.mrtus.demoapp.common.Common;
 import com.example.mrtus.demoapp.feature.home.HomeFragment;
-import com.example.mrtus.demoapp.feature.login.LoginFragment;
+import com.example.mrtus.demoapp.feature.login.view.LoginFragment;
 
 /**
  * A simple {@link Fragment} subclass.

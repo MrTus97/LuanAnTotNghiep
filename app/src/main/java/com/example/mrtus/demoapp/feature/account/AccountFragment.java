@@ -2,19 +2,17 @@ package com.example.mrtus.demoapp.feature.account;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.mrtus.demoapp.R;
 import com.example.mrtus.demoapp.common.Common;
 import com.example.mrtus.demoapp.common.FlagStatus;
-import com.example.mrtus.demoapp.feature.login.LoginFragment;
+import com.example.mrtus.demoapp.feature.login.view.LoginFragment;
 
 
 /**

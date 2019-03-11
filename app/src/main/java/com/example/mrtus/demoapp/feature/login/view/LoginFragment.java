@@ -1,4 +1,4 @@
-package com.example.mrtus.demoapp.feature.login;
+package com.example.mrtus.demoapp.feature.login.view;
 
 
 import android.content.Context;
@@ -15,18 +15,21 @@ import com.example.mrtus.demoapp.R;
 import com.example.mrtus.demoapp.common.Common;
 import com.example.mrtus.demoapp.common.FlagStatus;
 import com.example.mrtus.demoapp.feature.home.HomeFragment;
+import com.example.mrtus.demoapp.feature.login.model.LoginModel;
+import com.example.mrtus.demoapp.feature.login.presenter.ILoginPresenter;
+import com.example.mrtus.demoapp.feature.login.presenter.LoginPresenter;
 import com.example.mrtus.demoapp.feature.signUp.SignUpFragment;
-import com.example.mrtus.demoapp.feature.template.MainActivity;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class LoginFragment extends Fragment {
+public class LoginFragment extends Fragment implements ILoginFragment {
 
     private View view;
     private Button btnLogin;
     private TextView tvSignUp;
     private Context context;
+    private LoginPresenter loginPresenter;
     public LoginFragment() {
         // Required empty public constructor
     }
@@ -49,6 +52,7 @@ public class LoginFragment extends Fragment {
     }
 
     private void setEvent() {
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,6 +71,22 @@ public class LoginFragment extends Fragment {
     private void initXml() {
         btnLogin = view.findViewById(R.id.btnLoginAct_login);
         tvSignUp = view.findViewById(R.id.tvLoginAct_signUp);
+        loginPresenter = new LoginPresenter(this);
+
+    }
+
+    @Override
+    public void loginSuccess(LoginModel loginModel) {
+
+    }
+
+    @Override
+    public void loginFailure(String message) {
+
+    }
+
+    @Override
+    public void anotherReason(String message) {
 
     }
 }

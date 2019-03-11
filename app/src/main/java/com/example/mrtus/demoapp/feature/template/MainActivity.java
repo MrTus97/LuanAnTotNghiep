@@ -1,6 +1,5 @@
 package com.example.mrtus.demoapp.feature.template;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -10,12 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 
-import com.example.mrtus.demoapp.common.Common;
 import com.example.mrtus.demoapp.common.FlagStatus;
 import com.example.mrtus.demoapp.feature.account.AccountFragment;
 import com.example.mrtus.demoapp.feature.home.HomeFragment;
 import com.example.mrtus.demoapp.R;
-import com.example.mrtus.demoapp.feature.login.LoginFragment;
+import com.example.mrtus.demoapp.feature.login.view.LoginFragment;
 import com.example.mrtus.demoapp.feature.search.SearchFragment;
 
 public class MainActivity extends AppCompatActivity {
