@@ -11,7 +11,7 @@ import android.view.MenuItem;
 
 import com.example.mrtus.demoapp.common.FlagStatus;
 import com.example.mrtus.demoapp.feature.account.AccountFragment;
-import com.example.mrtus.demoapp.feature.home.HomeFragment;
+import com.example.mrtus.demoapp.feature.home.view.HomeFragment;
 import com.example.mrtus.demoapp.R;
 import com.example.mrtus.demoapp.feature.login.view.LoginFragment;
 import com.example.mrtus.demoapp.feature.search.SearchFragment;

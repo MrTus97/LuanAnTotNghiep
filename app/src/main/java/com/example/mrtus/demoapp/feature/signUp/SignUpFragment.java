@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.example.mrtus.demoapp.R;
 import com.example.mrtus.demoapp.common.Common;
-import com.example.mrtus.demoapp.feature.home.HomeFragment;
+import com.example.mrtus.demoapp.feature.home.view.HomeFragment;
 import com.example.mrtus.demoapp.feature.login.view.LoginFragment;
 
 /**
