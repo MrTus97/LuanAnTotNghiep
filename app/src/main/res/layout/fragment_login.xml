@@ -3,8 +3,8 @@
     android:id="@+id/scvLoginAct_container"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:fitsSystemWindows="true"
-    android:layout_marginBottom="@dimen/bottomNavigation_height">
+    android:layout_marginBottom="@dimen/bottomNavigation_height"
+    android:fitsSystemWindows="true">
 
     <LinearLayout
         android:id="@+id/layoutLoginAct_container"

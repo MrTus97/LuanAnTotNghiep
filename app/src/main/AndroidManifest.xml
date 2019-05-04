@@ -23,12 +23,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".feature.signUp.SignUpActivity"
-            android:theme="@style/AppTheme.Dark"
-            />
-        <activity
-            android:name=".feature.login.LoginActivity"/>
-        <activity
             android:name=".feature.template.MainActivity"
             android:label="@string/app_name"/>
 

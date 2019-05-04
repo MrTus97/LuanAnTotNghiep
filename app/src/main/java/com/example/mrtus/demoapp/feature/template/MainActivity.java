@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 
-import com.example.mrtus.demoapp.common.FlagStatus;
+import com.example.mrtus.demoapp.common.Common;
 import com.example.mrtus.demoapp.feature.account.AccountFragment;
 import com.example.mrtus.demoapp.feature.home.view.HomeFragment;
 import com.example.mrtus.demoapp.R;
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.navigation_account:
                         Log.i(TAG,"account");
-                        if (FlagStatus.isLogin){
+                        if (Common.isLogin){
                             loadFragment(new AccountFragment());
                         }else{
                             loadFragment(new LoginFragment());

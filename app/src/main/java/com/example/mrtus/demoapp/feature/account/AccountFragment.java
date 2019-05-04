@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 
 import com.example.mrtus.demoapp.R;
 import com.example.mrtus.demoapp.common.Common;
-import com.example.mrtus.demoapp.common.FlagStatus;
+import com.example.mrtus.demoapp.common.model.Customer;
 import com.example.mrtus.demoapp.feature.login.view.LoginFragment;
 
 
@@ -26,7 +26,6 @@ public class AccountFragment extends Fragment {
     public AccountFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,7 +47,7 @@ public class AccountFragment extends Fragment {
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FlagStatus.isLogin = false;
+                Common.setLogout();
                 Common.loadFragment(new LoginFragment(),context);
             }
         });

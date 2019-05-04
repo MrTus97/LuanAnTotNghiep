@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mrtus.demoapp.R;
+import com.example.mrtus.demoapp.common.model.Customer;
 
 
 /**
